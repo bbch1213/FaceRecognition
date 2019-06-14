@@ -12,6 +12,7 @@ header {
 #title-pic { width: 1100px; height:150px; margin:0 auto;}
 
 header > nav { width: 1100px; height:50px;  margin:0 auto; background-color:#18304a; }
+
 #main-menu { 
 	display: block;
 	float: left;
@@ -63,10 +64,146 @@ main { width:100%; height:auto;
 	padding: 0 auto; 
 	background-color: #1e3854;  	
 }
-#main-section { width:1100px; height:800px; 
+
+#main-section { width:1000px; height:800px; 
 	margin: 0 auto; 
 	position: relative; 
 	background-color: #3c638d;
+	padding: 50px;
+}
+
+#cheerText
+{
+	position: absolute;
+	top: 70px;
+	left: 650px;
+	font-family: 'Sunflower', sans-serif;
+	color: white;
+	font-size: 20px;
+}
+
+#memo
+{
+	margin: 0 auto;
+	position: absolute;
+	top: 120px;
+	left: 500px;
+	font-family: 'Sunflower', sans-serif;
+}
+
+#score
+{
+	float: left;
+}
+
+#List {
+	text-align: center;
+	font-family: 'Do Hyeon', sans-serif;
+	color : white;
+	font-size: 18px;
+	position: absolute;
+	top: 400px;
+	width: 1000px;
+}
+
+#gdsList
+{
+	float: left;
+	display: block;
+	background-color: blue;
+	width: 500px;
+}
+
+#trtList
+{
+	float: right;
+	display: block;
+	background-color: red;
+	width: 500px;
+}
+
+#scoreboard {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	opacity: 1;
+	z-index: 0;
+}
+
+#scorecanvas {
+	width: 350px;
+	height: 175px;
+	position: absolute;
+	top:110px;
+	left:73px;
+	z-index:1;
+
+	opacity: 1;
+}
+#scorecanvas table {
+	border-collapse: collapse;
+	text-align: center;
+	width:350px;
+	height:175px;
+}
+#scorecanvas tr,td {
+	border: 1px solid #e6e6e6;
+	padding: 5px;
+	color:white;
+	font-family: 'Audiowide', cursive;
+	font-size:0.995em;
+}
+#showseries {
+	width: 100px;
+	height: 30px;
+	position: absolute;
+	top:58px;
+	left:200px;
+	z-index:1;
+	text-align: center;
+	line-height: 30px;
+	font-family: 'Electrolize', sans-serif;
+	font-size: 2em;
+	color:yellow;
+
+}
+.tab-title { overflow: hidden; }
+.tab-title > label
+{
+	display: block;
+	float: left;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	text-align : center;
+	border : 1px solid black;
+
+	background: white;
+	color: black;
+}
+#save
+{
+	float: right;
+	width: 60px;
+	height: 30px;
+	border-radius: 2px;
+	font-family: 'Gothic A1', sans-serif;
+}
+input {display: none;}
+input:nth-of-type(1)~div:nth-of-type(1){display: none;}
+input:nth-of-type(1):checked~div:nth-of-type(1){display: block;}
+
+input:nth-of-type(2)~div:nth-of-type(2){display: none;}
+input:nth-of-type(2):checked~div:nth-of-type(2){display: block;}
+input:nth-of-type(1):checked~section.tab-title > label:nth-of-type(1)
+{
+	background: blue;
+	color: white;
+}
+input:nth-of-type(2):checked~section.tab-title > label:nth-of-type(2)
+{
+	background: red;
+	color: white;
 }
 /* ========== 메인섹션 ========== */
 

@@ -8,12 +8,18 @@
 	<meta name="viewport" content="width=device-width", initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-storage.js"></script>
+
+   <!-- <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-messaging.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
-
+-->
 	<link rel="stylesheet" type="text/css" href="menu4.css">
 	<script src="menu4.js"></script>
 
@@ -22,6 +28,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Electrolize&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -43,7 +51,28 @@
 	</header>
 	<main>
 			<div id="main-section">
-
+				<div id="score">
+					<img id="scoreboard" src="스코어보드.png">
+					<div id="scorecanvas"></div> <!--일정 및 결과 -->
+					<div id="showseries"></div> <!--점수-->
+				</div>
+				<div id="cheerText">
+					<h3>당신의 팀을 응원해주세요!</h3>
+				</div>
+				<div id="memo">
+					<input type="radio" name="tab" id="gds" value="gds" checked="checked">
+					<input type="radio" name="tab" id="trt" value="trt">
+					<section class="tab-title">
+						<label for="gds">Golden State 응원</label>
+						<label for="trt">Toronto 응원</label>
+					</section>
+					<textarea id="brdmemo" rows="8" cols="80"></textarea placeholder="내용을 입력하세요"><br/>
+					<button type="button" id="save">등록하기</button><br/>
+				</div>
+				<div id="List">
+					<div id="gdsList"></div>
+					<div id="trtList"></div>
+				</div>
 			</div>
 	</main>
 	
@@ -59,5 +88,4 @@
 		</div>
 	</footer>
 </body>
-
 </html>
